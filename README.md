@@ -1,43 +1,115 @@
-# COMP90089-Machine Learning For Health-Group Project-Group17
+# 365-Day Hospital Readmission Prediction for Ischemic Stroke
 
-## Table of Repository Contents
-1. [Team Contract](ML4Health_TeamContract_17.pdf)
-2. [Project Proposal](ML4Health_proposal_Group17.pdf)
-3. [Cohort Extraction and Exploratory Data Analysis](Data_Handling.ipynb)
-4. [Data Processing Generic](Process_Data_Generic.ipynb)
-5. [Machine Learning Modelling](ML_Models.ipynb)
-6. [Feature Importance Analysis](Feature_Importance_ISP_Dataset.ipynb)
-7. [Pre-created Dataset of Full Cohort](full_cohort.csv)
-8. [Environment Setting Requirements](requirements.txt)
+## Repository Overview
 
-## Project Details
+This repository presents an end-to-end machine learning pipeline for predicting
+365-day hospital readmission among patients diagnosed with ischemic stroke.
+The study leverages the MIMIC-IV clinical database and evaluates multiple machine
+learning models to assess predictive performance and identify clinically relevant
+features.
 
-### Objective
-This study aims to predict 365-day hospital readmission for ischemic stroke
-patients using machine learning models and to identify key predictive features to inform
-clinical decision-making.
+---
 
-### Materials and Methods
-We used the MIMIC-IV dataset to build and evaluate three
-ML models: Random Forest, XGBoost, and PCA Clustering. Due to the class imbalance
-in readmission cases, we employed SMOTE oversampling for Random Forest to improve
-performance. Hyperparameters for each model were optimized using grid search with
-cross-validation, and feature importance was analyzed using clustering and permutation
-methods.
+## Repository Contents
 
-### Results
-The models achieved moderate performance, with AUC values of 0.64 for Random Forest and 0.78 for XGBoost, indicating limited discriminative ability. While SMOTE improved class balance, the models still struggled to achieve high predictive accuracy. Clustering analysis identified features such as length of stay, troponin T levels, and maximum systolic BP as influential in predicting readmission. Permutation importance for Random Forest highlighted the complex interplay of features affecting patient outcomes.
+1. Team Contract – `ML4Health_TeamContract_17.pdf`  
+2. Project Proposal – `ML4Health_proposal_Group17.pdf`  
+3. Cohort Extraction and Exploratory Data Analysis – `Data_Handling.ipynb`  
+4. Generic Data Processing Pipeline – `Process_Data_Generic.ipynb`  
+5. Machine Learning Modelling – `ML_Models.ipynb`  
+6. Feature Importance Analysis – `Feature_Importance_ISP_Dataset.ipynb`  
+7. Pre-processed Full Cohort Dataset – `full_cohort.csv`  
+8. Environment and Dependency Requirements – `requirements.txt`
 
-## Steps to Implement Codes
-* Require access to MIMIC-IV database and finish Bigquery settings via the link: [MIMIC-IV Access](https://physionet.org/content/mimiciv/2.2/)
-* Set the environment and versions according to the [Environment Setting Requirement](requirements.txt).
-* Run the code of [Cohort Extraction and Exploratory Data Analysis](Data_Handling.ipynb), save the full cohort dataset, or use the [Pre-created Dataset of Full Cohort](full_cohort.csv).
-* Input Dataset file and apply it by running [Machine Learning Modelling](ML_Models.ipynb), which contains data processing, modelling, evaluation and analysis.
-* Run [Feature Importance Analysis](Feature_Importance_ISP_Dataset.ipynb).
+---
+
+## Objective
+
+The objective of this study is to predict 365-day hospital readmission for patients
+admitted with ischemic stroke and to identify key predictive clinical features that
+may inform clinical decision-making and post-discharge risk stratification.
+
+---
+
+## Materials and Methods
+
+### Dataset
+- MIMIC-IV (version 2.2)
+- Adult patients diagnosed with ischemic stroke
+
+### Machine Learning Models
+- Random Forest
+- XGBoost
+- PCA-based Clustering
+
+### Methodology
+- Class imbalance in readmission outcomes was addressed using SMOTE oversampling
+  for the Random Forest model.
+- Hyperparameters were optimized using grid search with cross-validation.
+- Model performance was evaluated using AUC-ROC and additional classification metrics.
+- Feature importance was examined using permutation importance and PCA-based
+  clustering techniques.
+
+---
+
+## Results
+
+- Random Forest achieved an AUC of 0.64.
+- XGBoost achieved an AUC of 0.78.
+
+Overall predictive performance was moderate, indicating limited discriminative
+ability despite the use of imbalance correction techniques.
+
+### Key Predictive Features
+- Length of hospital stay
+- Troponin T levels
+- Maximum systolic blood pressure
+
+Feature importance analyses suggest complex, non-linear interactions among
+clinical variables contributing to readmission risk.
+
+---
+
+## How to Run the Code
+
+### Step 1: Obtain Access to MIMIC-IV
+Access to the MIMIC-IV database and BigQuery setup is required.
+Instructions are available at:
+[https://physionet.org/content/mimiciv/2.2/](https://physionet.org/content/mimiciv/2.2/)
+
+### Step 2: Environment Setup
+Install the required dependencies using:
+```bash
+pip install -r requirements.txt
+```
+
+### Step 3: Cohort Extraction and Exploratory Data Analysis
+
+Run `Data_Handling.ipynb` to extract the ischemic stroke cohort and perform
+exploratory data analysis.  
+Alternatively, the pre-processed dataset `full_cohort.csv` may be used directly.
+
+### Step 4: Model Training and Evaluation
+
+Execute `ML_Models.ipynb` to perform data preprocessing, model training,
+model evaluation, and performance analysis.
+
+### Step 5: Feature Importance Analysis
+
+Run `Feature_Importance_ISP_Dataset.ipynb` to analyze feature contributions
+to model predictions.
+
+---
 
 ## Conclusion
-Our results have highlighted the complexity involved in modeling clinical data. In addition, our struggles to establish a cohort that is large, complete, and relevant clinically proved deeply challenging. Prior literature on different datasets suggested ML accuracy for stroke readmission obtained only moderate results. Our findings were in line with this.
 
-**Warm Regards**
+This study highlights the challenges associated with predicting hospital
+readmission using real-world clinical data. Constructing a clinically relevant,
+sufficiently large, and complete ischemic stroke cohort proved challenging.
+The moderate performance observed across models is consistent with existing
+literature, suggesting that 365-day stroke readmission prediction remains a
+complex and difficult task even with advanced machine learning techniques.
+
+---
 
 Group 17
