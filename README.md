@@ -12,14 +12,14 @@ features.
 
 ## Repository Contents
 
-1. Team Contract – `ML4Health_TeamContract_17.pdf`  
-2. Project Proposal – `ML4Health_proposal_Group17.pdf`  
-3. Cohort Extraction and Exploratory Data Analysis – `Data_Handling.ipynb`  
-4. Generic Data Processing Pipeline – `Process_Data_Generic.ipynb`  
-5. Machine Learning Modelling – `ML_Models.ipynb`  
-6. Feature Importance Analysis – `Feature_Importance_ISP_Dataset.ipynb`  
-7. Pre-processed Full Cohort Dataset – `full_cohort.csv`  
-8. Environment and Dependency Requirements – `requirements.txt`
+1. Team Contract – [`ML4Health_TeamContract_17.pdf`](ML4Health_TeamContract_17.pdf)  
+2. Project Proposal – [`ML4Health_proposal_Group17.pdf`](ML4Health_proposal_Group17.pdf)  
+3. Cohort Extraction and Exploratory Data Analysis – [`Data_Handling.ipynb`](Data_Handling.ipynb)  
+4. Generic Data Processing Pipeline – [`Process_Data_Generic.ipynb`](Process_Data_Generic.ipynb)  
+5. Machine Learning Modelling – [`ML_Models.ipynb`](ML_Models.ipynb)  
+6. Feature Importance Analysis – [`Feature_Importance_ISP_Dataset.ipynb`](Feature_Importance_ISP_Dataset.ipynb)  
+7. Pre-processed Full Cohort Dataset – [`full_cohort.csv`](full_cohort.csv)  
+8. Environment and Dependency Requirements – [`requirements.txt`](requirements.txt)
 
 ---
 
@@ -85,18 +85,18 @@ pip install -r requirements.txt
 
 ### Step 3: Cohort Extraction and Exploratory Data Analysis
 
-Run `Data_Handling.ipynb` to extract the ischemic stroke cohort and perform
+Run [`Data_Handling.ipynb`](Data_Handling.ipynb) to extract the ischemic stroke cohort and perform
 exploratory data analysis.  
-Alternatively, the pre-processed dataset `full_cohort.csv` may be used directly.
+Alternatively, the pre-processed dataset [`full_cohort.csv`](full_cohort.csv) may be used directly.
 
 ### Step 4: Model Training and Evaluation
 
-Execute `ML_Models.ipynb` to perform data preprocessing, model training,
+Execute [`ML_Models.ipynb`](ML_Models.ipynb) to perform data preprocessing, model training,
 model evaluation, and performance analysis.
 
 ### Step 5: Feature Importance Analysis
 
-Run `Feature_Importance_ISP_Dataset.ipynb` to analyze feature contributions
+Run [`Feature_Importance_ISP_Dataset.ipynb`](Feature_Importance_ISP_Dataset.ipynb) to analyze feature contributions
 to model predictions.
 
 ---
